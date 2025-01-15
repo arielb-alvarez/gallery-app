@@ -1,6 +1,6 @@
 # Gallery App
 
-This template should help get you run this application.
+This template should help you run this application.
 
 ## Direction
 
