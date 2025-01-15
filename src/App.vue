@@ -25,6 +25,7 @@ const removeImage = () => {
 
 <template>
     <div class="gallery">
+      <div v-if="!images.length && !isAddImageLoading" class="no-image">No Image Available. <br> click "Add Image" button to add image(s).</div>
       <img class="item" v-for="image in images" :src="image" />
       <div v-if="isAddImageLoading === true" class="item-skeleton"></div>
     </div>
@@ -40,6 +41,12 @@ const removeImage = () => {
     gap: 10px;
     flex-wrap: wrap;
     justify-content: center;
+  }
+
+  .no-image {
+    text-align: center;
+    color: #cecece;
+    font-size: 14px;
   }
 
   .item,
